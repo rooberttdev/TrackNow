@@ -21,8 +21,11 @@
     "fix-line-endings": "node -e \"const fs = require('fs'); const { globSync } = require('glob'); const files = globSync('src/**/*.ts'); files.forEach(file => { const content = fs.readFileSync(file, 'utf8').replace(/\\r\\n/g, '\\n'); fs.writeFileSync(file, content, 'utf8'); console.log(`Fixed LF: ${file}`); });\""
   },
   "dependencies": {
+    "@googlemaps/google-maps-services-js": "^3.4.0",
     "@nestjs/common": "^10.0.0",
+    "@nestjs/config": "^3.3.0",
     "@nestjs/core": "^10.0.0",
+    "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^10.0.0",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1"
